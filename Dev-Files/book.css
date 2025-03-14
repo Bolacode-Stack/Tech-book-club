@@ -1,0 +1,923 @@
+/* martian-mono-regular - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Martian Mono';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/martian-mono-v3-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  
+  /* martian-mono-600 - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Martian Mono';
+    font-style: normal;
+    font-weight: 600;
+    src: url('../fonts/martian-mono-v3-latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  
+  /* martian-mono-700 - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Martian Mono';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/martian-mono-v3-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+
+  /* inter-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/inter-v18-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/*  Colour variables */
+:root {
+    --neutral-900: #062630;
+    --neutral-700: #385159;
+    --neutral-200: #e6e1df;
+    --neutral-100: #faf5f3;
+    --neutral-0: #ffffff;
+    --light-salmon-500: #fea36f;
+    --light-salmon-100:#ffe2d1;
+    --light-salmon-50: #fff5ef;
+    --text-gradient: linear-gradient(107deg, #ff9a60 -11.37%, #062630 61.84%);
+    --gradient: linear-gradient(90deg, #ffe2d1 0%, #fff5ef 100%);
+}
+
+/* Spacing custom props */
+:root {
+  --space-lg: 120px;
+  --space-md: 64px;
+  --space-sm: 24px;
+}
+
+/* Font sizes */
+:root {
+  --font-md: 34px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /* min-height: 100vh; */
+  font-family: "Martian Mono", serif;
+}
+
+h2,
+h3 {
+  color: var(--neutral-900);
+}
+
+h1 {
+    font-size: clamp(2.375rem, 1.5991379310344829rem + 3.3103448275862064vw, 3.875rem);
+  }
+  
+  h2 {
+    font-size: clamp(2.125rem, 1.6704545454545454rem + 1.9393939393939394vw, 3.125rem);
+  }
+  
+  h3 {
+    font-size: clamp(1.5rem, 1.2159090909090908rem + 1.2121212121212122vw, 2.125rem);
+  }
+  
+  
+  p {
+    font-family: 'Inter';
+    color: var(--neutral-700);
+    font-size: clamp(1.25rem, 1.25rem + 0vw, 1.25rem);
+  }
+  
+  .navbar {
+    padding-block-start: 29px;
+  }
+
+  .tech-grid {
+    display: grid;
+    column-gap: 24px;
+    grid-template-columns: 0.1rem  repeat(4, calc((375px - 64px - 24px  * 3) / 4)) 0.1rem;
+  }
+  
+  .navbar  {
+    grid-column: 2;
+  }
+  
+  .header {
+    min-height: 1116.92px;
+    background-color: var(--light-salmon-50);
+    background-image: url(Images/pattern-light-bg.svg);
+  }
+  
+  .glow {
+    left: 100px;
+    z-index: -1;
+    position: absolute;
+  }
+  
+  .info {
+    grid-column: 2  / -1;
+  }
+  
+  .info > h1 {
+  width: 100%;
+  line-height: 120%;
+  letter-spacing: -0.5px;
+}
+
+.info > p {
+  margin-top: 24px;
+  line-height: 140%;
+  letter-spacing: -0.5px;
+}
+
+.heading-gradient {
+  color: transparent;
+  -webkit-background-clip: text;
+  background-image: var(--text-gradient);
+}
+
+.button {
+  border: 0;
+  display: flex;
+  padding: 16px;
+  font-size: 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  column-gap: 11px;
+  margin-top: 32px;
+  border-radius: 8px;
+  font-family: inherit;
+  flex-direction: row;
+  align-items: center;
+  letter-spacing: -1px;
+  color: var(--neutral-900);
+  background-color: inherit;
+  text-transform: uppercase;
+  border: 2px solid var(--neutral-900);
+  background-color: var(--light-salmon-50);
+}
+
+.button:hover {
+  background: var(--gradient);
+  box-shadow: 0 0 0 3px var(--light-salmon-50), 0 0 0 5px var(--neutral-700);  
+}
+
+.developers {
+  display: flex;
+  margin-top: 20px;
+  column-gap: 12px;
+  align-items: center;
+}
+
+.three-men {
+  max-width: 80%;
+  line-height: 120%;
+  font-size: 0.875rem;
+  letter-spacing: -1px;
+  color: var(--neutral-700);
+  font-family: "Martian Mono", serif;
+}
+
+.mobile-images {
+  border-radius: 5.08px;
+}
+
+.desktop-image {
+  display: none;
+}
+
+.desktop-read {
+  display: none;
+}
+
+/* Reading section */
+.read-together {
+  margin-top: 40px;
+}
+
+.grow-together > h2 {  
+  text-align: left;
+  grid-column: 2 / -1;
+  margin-bottom: 24px;
+}
+
+.grow-together {
+  grid-column: 2 / -1;
+  font-size: 2.125rem;
+}
+
+.check-text {
+  gap: 14px;
+  display: flex;
+  margin: 20px 0;
+  letter-spacing: -0.5px;
+}
+
+.read {
+  grid-column: 2;
+}
+
+.readers {
+  margin-top: 40px;
+  border-radius: 8px;
+}
+
+/* Book club */
+.book-club {
+  min-height: 682.5px;
+}
+
+.average {
+  grid-column: 2 / -1;
+  padding-block-start: 64px;
+}
+
+.average > p {
+  line-height: 140%;
+  margin-top: 24px;
+  letter-spacing: -0.5px;
+}
+
+.club-header {
+  background-image: url(Images/pattern-circle.png);
+}
+
+.not-average {
+  display: none;
+}
+
+/* Tech reading */
+.tech-reading {
+  grid-column: 2;
+}
+
+.journey {
+  grid-column: 2 / -1;
+  border-radius: 12px;
+  padding-inline: 1rem;
+  margin-top: var(--space-md);
+  background-image: url(Images/pattern-glow.svg);
+  background-image: url(Images/pattern-light-bg.svg);
+
+}
+
+.glow {
+  left: 400px;
+  z-index: 1;
+  height: 500px;
+  position: absolute;
+}
+
+.pattern {
+  position: absolute;
+}
+
+.journey > h2 {
+  line-height: 130%;
+  letter-spacing: -2px;
+  padding-block-start: var(--space-md);
+}
+
+.step-container {
+  margin-top: 30px;
+}
+
+.number-text {
+  margin: 30px 0;
+  font-weight: 600;
+  color: var(--neutral-900);
+  font-family: "Martian Mono", serif;
+}
+
+.number-text > * {
+  line-height: 130%;
+  letter-spacing: -1px;
+  font-family: 1.125rem;
+  color: var(--neutral-900);
+  font-family: "Martian Mono", serif;
+}
+
+.number-box {
+  width: 32px;
+  display: flex;
+  height: 32px;
+  margin: 28px 0;
+  border-radius: 4px;
+  align-items: center;
+  justify-content: center;
+ background-color: inherit;
+  border: 2.5px solid var(--neutral-900);
+}
+
+.arrows {
+  display: none;
+}
+
+/* Memberships */
+.members-heading {
+  grid-column: 2; 
+  margin-top: 64px;
+}
+
+.memberships {
+  display: grid;
+  grid-column: 2 / -1;
+  row-gap: var(--space-sm);
+  padding-block-start: 30px;
+}
+
+/* First option */
+.options {
+  grid-column: 2 / -1;
+  border-radius: 8px;
+  padding: var(--space-sm);
+  border: 1px solid var(--neutral-200);
+}
+
+.options > h3 {
+  margin-bottom: 24px;
+}
+
+.line {
+  color: var(--neutral-200);
+}
+
+.fees {
+  gap: 0.5rem;
+  display: flex;
+  justify-items: center;
+  margin-bottom: var(--space-sm);
+}
+
+.fees > p {
+  align-self: center;
+}
+
+.subscribe {
+  border: none;
+  font-size: 15px;
+  cursor: pointer;
+  font-weight: 600;
+  line-height: 130%;
+  border-radius: 8px;
+  padding: 17px 79px;
+  letter-spacing: -1px;
+  color: var(--neutral-900);
+  background-color: inherit;
+  text-transform: uppercase;
+  font-family: 'Martian Mono';
+  border: 2px solid var(--neutral-900);
+  background-color: var(--light-salmon-50) ;
+}
+
+.subscribe:hover {
+  background: var(--gradient);
+  box-shadow: 0 0 0 3px var(--light-salmon-50), 0 0 0 5px var(--neutral-700);  
+}
+
+/* options */
+
+/* Third option */
+.enterprise > h2{
+  margin-bottom: var(--space-sm);
+}
+
+.enterprise-button {
+  width: 100%;
+}
+
+/* Five star review */
+.review {
+  background-color: var(--neutral-0);
+}
+
+.five-stars {
+  gap: 32px;
+  grid-column: 2 / -1;
+  padding-block-start: var(--space-md);
+}
+
+.review-text > h3  {
+  margin: 32px 0;
+  font-weight: 600;
+  line-height: 110%;
+  letter-spacing: -1px;
+}
+
+.review-text {
+  grid-column: 2 / -1;
+}
+
+.reviewer {
+  letter-spacing: -0.5px;
+  text-transform: capitalize;
+}
+
+/* Footer */
+.footer {
+  /* background-color: orange; */
+}
+
+.regrid {
+  display: grid;
+  grid-column: 1 / -1;
+  column-gap: 24px;
+  grid-template-columns: 0.5rem repeat(4, calc((375px - 64px - 24px  * 3) / 4)) 0.5rem;
+}
+
+.contents {
+  z-index: -1;
+  margin-top: 60px;
+  grid-column: 1 / -1;
+  padding: 48px 16px;
+  color: var(--neutral-0);
+  border-radius: 20px 20px 0 0;
+  background-color: var(--neutral-900);
+  background-image: url(Images/pattern-dark-bg.svg);
+}
+
+.contents > h1 {
+  text-align: center;
+  line-height: 130%;
+  letter-spacing: -2px;
+  margin-bottom: 40px;
+  font-size: var(--font-md);
+}
+
+.footer-button {
+  margin: 0 auto;
+  /* padding: 13px 10px; */
+  color: var(--neutral-0);
+  border: 2px solid #fff;
+  background-color: var(--neutral-900);
+}
+
+.developers {
+  margin-block-end: 64px;
+}
+
+.divider {
+  height: 1px;
+  color: var(--neutral-700);
+}
+
+.tech, .tech-gurus {
+  font-size: 14px;
+  line-height: 120%;
+  letter-spacing: -1px;
+  color: var(--neutral-0);
+  font-family: 'Martian Mono';
+}
+
+.tech {
+  text-align: center;
+  padding-block-start: var(--space-sm);
+}
+
+.icons {
+  margin-top: 1rem;
+  text-align: center;
+  align-items: center;
+}
+
+.bluesky {
+  width: 22px;
+  height: 22px;
+}
+
+.linkedin {
+  width: 18px;
+  height: 22px;
+}
+
+/* Tablet Styles */
+@media(width >= 48em)  {
+  .tech-grid {
+    column-gap: 24px;
+    grid-template-columns: 0.1rem repeat(8, calc((768px  - 64px - 24px * 7) / 8)) 0.1rem;
+  }
+
+  .header {
+    min-height: 1557px;
+  }
+
+  .info > h1 {
+    max-width: 70%;
+  }
+
+  .info > p {
+    max-width: 50ch;
+  } 
+  
+  .stars > p {
+    max-width: 80%;
+  }
+
+  .review {
+    font-size: 1.125rem;
+  }
+  
+  .hero-mobile {
+    background: url(Images/pattern-glow.svg);
+  }
+
+  .picture {
+    width: 100%;
+    grid-column: 2;    
+    background: url(Images/pattern-glow.svg);
+  }
+
+  .tablet-image {
+    border-radius: 50px;
+  }
+
+  /* Reading section */
+  .grow-together {
+    max-width: 60%;
+  }
+
+  .average > h2 {
+    max-width: 70%;
+  }
+
+  .not-average {
+    display: none;
+  }
+
+  .logos {
+    left: 450px;
+    top: 500px;
+    position: relative;
+  }
+
+  /* Tech reading / Journey */
+  .journey {
+    grid-column: 2 / 10;
+    padding-inline: 2rem;
+  }
+
+  /* Memberships */
+  .memberships {
+    display: grid;
+    row-gap: var(--space-sm);
+  }
+
+  .options > * {
+    align-items: center;
+  }
+
+  .pro {
+    right: 13px;
+    grid-column: 5;
+    position: relative;
+  }
+
+  /* Review section */
+  .review-text > h3 {
+    max-width: 29ch;
+    line-height: 130%;
+    letter-spacing: -1px;
+    font-size: var(--font-md);
+  }
+
+  /* Footer */  
+  .regrid {
+    grid-column: 1 / -1;
+    column-gap: 24px;
+    grid-template-columns: 8px repeat(8, calc((768px  - 64px - 24px * 7) / 8)) 8px;
+  }
+
+  .contents  {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(8, 88px);
+  }
+
+  .contents > * {
+    grid-column: 1 / -1;
+  }
+
+  .contents > h1 {
+    grid-column: 2 / 8;
+  }
+
+  .footer-button {
+    margin: 0 auto;
+    grid-column: 3 / 7;
+  }
+
+  .developers {
+    left: 10px;
+    flex-basis: 100%;
+    position: relative;
+    grid-column: 3 / 9;
+  }
+
+  .footer-base {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+/* Desktop */
+@media(width >= 69em)  {
+  .tech-grid {
+    column-gap: 30px;
+    grid-template-columns: 105px repeat(12, calc((100% - 70px - 30px * 11) / 12)) 105px;
+  }
+
+  .navbar  {
+    grid-row: 1;
+    grid-column: 2;
+  } 
+
+  .header {
+    min-height: 834px;
+  }
+
+  .info > h1 {
+    max-width: 80%;
+  }
+
+  .picture {
+    display: none;
+  }
+
+  .header-text {
+    grid-row: 1;
+    grid-column: 2 / 7;
+    margin-top: 137px;
+    align-items: center;
+  }
+
+  .header-text > h1 {
+    max-width: 100%;
+  }
+
+  .header-text > p {
+    max-width: 90%;
+  }
+
+  .stars > p {
+   max-width: 100%;
+  }
+
+  .desktop {  
+    left: 83px;
+    top: 100px;
+    grid-row: 1;
+    grid-column: 7;
+    position: relative;
+    border-radius: 10px;
+  }
+
+  .desktop-image {
+    display: block;
+    border-radius: 8px;
+  }
+
+  /* Readers section */
+  .desktop-read {
+    display: block;
+    grid-column: 2;
+    border-radius: 20px;
+  }
+
+  .read-together {
+    margin-top: 100px;
+  }
+
+  .grow-together {
+    align-self: center;
+    grid-column: 8 / -1;
+  }
+
+  .check-text {
+    width: 100%;
+  }
+
+.read {
+  display: none;
+}
+
+.read, .readers {
+  display: none;
+}
+
+.not-average {
+  left: 32px;
+  display: block;
+  grid-column: 7;
+  align-self: start;
+  justify-self: start;
+  position: relative;
+  border-radius: 20px;
+}
+
+.average {
+  display: grid;
+  row-gap: 44px;
+  grid-column: 2;
+  align-self: center;
+  grid-template-rows: repeat(2, 133px);
+  grid-template-columns: repeat(6, 88.33px);
+}
+
+.header-club {
+  width: 100%;
+  grid-column: 2 / 7;
+}
+
+.average > * {
+  grid-column: 1 / -1;
+}
+
+.average > h2 {
+  max-width: 30ch;
+  line-height: 130%;
+  grid-column: 1 / -1;
+  letter-spacing: -2px;
+}
+
+.average > p { 
+  align-self: end;
+}
+
+.average, .not-average {
+  margin-top: 50px;
+}
+
+.logos {
+  display: none;
+}
+
+.logos-tech {
+  z-index: 1;
+  left: 500px;
+  top: 450px;
+  position: relative;
+}
+
+/* Tech reading */
+.journey {
+  grid-column: 2 / 12;
+}
+
+.journey > h2 {
+  margin: auto; 
+  max-width: 15ch;
+  text-align: center;
+}
+
+.step-container  {
+  display: flex;
+}
+
+.arrows {
+  top: 45px;
+  right: 100px;
+  display: block;
+  position: relative;
+}
+
+.members-heading   {
+  left: 36px;
+  position: relative;
+  margin-top: 99px;
+  grid-column: 4 / -1;
+}
+
+.memberships {
+  display: grid;
+  margin: 0 auto;
+  grid-column: 3;
+  align-items: center;
+  grid-template-columns: repeat(10, 90px);
+}
+
+.grid {
+  padding-block-start: 64px;
+}
+
+ .pro {
+  left: 6px;
+  width: 350px;
+  height: 390px;
+  grid-column: 4;
+  position: relative;
+  /* align-self: end; */
+  padding: 40px 24px;
+}
+
+ .starter, .enterprise  {
+  width: 258px;
+  height: 356px;
+} 
+
+.starter {
+  grid-column: 1;
+}
+
+.starter-button, .enterprise-button {
+  position: absolute;
+}
+
+.starter-button {
+  padding: 15px 43px;
+}
+
+.enterprise {
+  left: 13px;
+  grid-column: 8;
+  position: relative;
+  /* background: linear-gradient(to right, navy, brown); */
+}
+
+.enterprise-button {
+  display: flex;
+  width: fit-content;
+  padding: 15px 55px;
+  letter-spacing: -1px;
+}
+
+.fees > h2 {
+  font-size: 2.125rem;
+}
+
+.custom {
+  font-size: 2.125rem;
+}
+
+.options > h3 {
+  font-size: 1.5rem;
+  /* background-color: red; */
+}
+
+/* Five star review */
+.five-stars {
+  margin-top: 56px;
+  grid-column: 6 / -1;
+}
+
+.review-text {
+  grid-column: 3 / 11;
+}
+
+.review-text > h3 {
+  max-width: 65ch;
+  text-align: center;
+}
+
+.reviewer {
+  text-align: center;
+}
+
+/* Desktop Footer */
+body {
+  overflow-x: hidden;
+}
+.regrid {
+  /* grid-column: 1 / -1; */
+  column-gap: 30px;
+  grid-template-columns: 0.25rem repeat(12, calc((100% - 70px - 30px * 11) / 12)) 0.25rem;
+}
+
+.contents {
+  display: grid;
+  /* grid-column: 1 / -1; */
+  grid-template-columns: repeat(10, 144px);
+}
+
+.contents > h1 {
+  grid-column: 3 / 9;
+  font-size: 3.125rem;
+}
+
+.footer-button {
+  margin: 0 auto;
+  text-align: center;
+  grid-column: 3 / 9;
+}
+
+.developers {
+  margin: 24px auto;
+}
+
+.divider {
+  width: 83%;
+  margin: 0 auto;
+}
+
+.footer-base {
+  gap: 51em;
+  justify-content: space-evenly;
+}
+}
