@@ -36,14 +36,14 @@
 
 /*  Colour variables */
 :root {
-    --neutral-900: #062630;
-    --neutral-700: #385159;
-    --neutral-200: #e6e1df;
-    --neutral-100: #faf5f3;
-    --neutral-0: #ffffff;
-    --light-salmon-500: #fea36f;
+  --neutral-0: #ffffff;
+  --neutral-100: #faf5f3;
+  --neutral-200: #e6e1df;
+  --neutral-700: #385159;
+  --neutral-900: #062630;
+  --light-salmon-50: #fff5ef;
     --light-salmon-100:#ffe2d1;
-    --light-salmon-50: #fff5ef;
+    --light-salmon-500: #fea36f;
     --text-gradient: linear-gradient(107deg, #ff9a60 -11.37%, #062630 61.84%);
     --gradient: linear-gradient(90deg, #ffe2d1 0%, #fff5ef 100%);
 }
@@ -67,7 +67,6 @@
 }
 
 body {
-  /* min-height: 100vh; */
   font-family: "Martian Mono", serif;
 }
 
@@ -86,8 +85,7 @@ h1 {
   
   h3 {
     font-size: clamp(1.5rem, 1.2159090909090908rem + 1.2121212121212122vw, 2.125rem);
-  }
-  
+  }  
   
   p {
     font-family: 'Inter';
@@ -101,28 +99,28 @@ h1 {
 
   .tech-grid {
     display: grid;
-    column-gap: 24px;
-    grid-template-columns: 0.1rem  repeat(4, calc((375px - 64px - 24px  * 3) / 4)) 0.1rem;
+    column-gap: 16px;
+    grid-template-columns: 0.1rem repeat(4, calc((375px - 20px - 16px  * 4) / 4)) 0.1rem;
   }
-  
+
   .navbar  {
     grid-column: 2;
   }
   
   .header {
-    min-height: 1116.92px;
+    min-height: 1100px;
     background-color: var(--light-salmon-50);
     background-image: url(Images/pattern-light-bg.svg);
   }
-  
+
   .glow {
-    left: 100px;
+   left: 100px;
     z-index: -1;
     position: absolute;
   }
   
   .info {
-    grid-column: 2  / -1;
+    grid-column: 2 / -1;
   }
   
   .info > h1 {
@@ -146,7 +144,6 @@ h1 {
 .button {
   border: 0;
   display: flex;
-  padding: 16px;
   font-size: 1rem;
   cursor: pointer;
   font-size: 1rem;
@@ -157,6 +154,7 @@ h1 {
   font-family: inherit;
   flex-direction: row;
   align-items: center;
+  padding: 16px 23px;
   letter-spacing: -1px;
   color: var(--neutral-900);
   background-color: inherit;
@@ -187,6 +185,8 @@ h1 {
 }
 
 .mobile-images {
+  top: -25px;
+  position: relative;
   border-radius: 5.08px;
 }
 
@@ -205,12 +205,12 @@ h1 {
 
 .grow-together > h2 {  
   text-align: left;
-  grid-column: 2 / -1;
+  grid-column: 2 / -2;
   margin-bottom: 24px;
 }
 
 .grow-together {
-  grid-column: 2 / -1;
+  grid-column: 2 / -2;
   font-size: 2.125rem;
 }
 
@@ -236,7 +236,7 @@ h1 {
 }
 
 .average {
-  grid-column: 2 / -1;
+  grid-column: 2 / -2;
   padding-block-start: 64px;
 }
 
@@ -255,25 +255,32 @@ h1 {
 }
 
 /* Tech reading */
-.tech-reading {
-  grid-column: 2;
-}
-
 .journey {
-  grid-column: 2 / -1;
+  z-index: -1;
+  grid-column: 2 / -2;
   border-radius: 12px;
   padding-inline: 1rem;
   margin-top: var(--space-md);
-  background-image: url(Images/pattern-glow.svg);
+  padding-bottom: var(--space-md);
+  background-color: var(--neutral-100);
   background-image: url(Images/pattern-light-bg.svg);
+}
 
+.tech-reading {
+  position: relative;
+  background-position: center center / cover;
+  /* background-image: url(Images/pattern-glow.svg); */
 }
 
 .glow {
-  left: 400px;
-  z-index: 1;
-  height: 500px;
-  position: absolute;
+  top: 70px;
+  left: 240px;
+  width: 10px;
+  height: 10px;
+  position: relative;
+  border-radius: 50px;
+  /* background-color: aquamarine; */
+  /* box-shadow: 0 0 150px 80px aqua; */
 }
 
 .pattern {
@@ -291,7 +298,6 @@ h1 {
 }
 
 .number-text {
-  margin: 30px 0;
   font-weight: 600;
   color: var(--neutral-900);
   font-family: "Martian Mono", serif;
@@ -329,14 +335,14 @@ h1 {
 
 .memberships {
   display: grid;
-  grid-column: 2 / -1;
+  grid-column: 2 / -2;
   row-gap: var(--space-sm);
   padding-block-start: 30px;
 }
 
 /* First option */
 .options {
-  grid-column: 2 / -1;
+  grid-column: 1;
   border-radius: 8px;
   padding: var(--space-sm);
   border: 1px solid var(--neutral-200);
@@ -384,6 +390,9 @@ h1 {
 }
 
 /* options */
+.starter {
+  grid-column: 2 / -2;
+}
 
 /* Third option */
 .enterprise > h2{
@@ -413,7 +422,7 @@ h1 {
 }
 
 .review-text {
-  grid-column: 2 / -1;
+  grid-column: 2 / -2;
 }
 
 .reviewer {
@@ -422,10 +431,6 @@ h1 {
 }
 
 /* Footer */
-.footer {
-  /* background-color: orange; */
-}
-
 .regrid {
   display: grid;
   grid-column: 1 / -1;
@@ -454,7 +459,6 @@ h1 {
 
 .footer-button {
   margin: 0 auto;
-  /* padding: 13px 10px; */
   color: var(--neutral-0);
   border: 2px solid #fff;
   background-color: var(--neutral-900);
@@ -502,7 +506,7 @@ h1 {
 @media(width >= 48em)  {
   .tech-grid {
     column-gap: 24px;
-    grid-template-columns: 0.1rem repeat(8, calc((768px  - 64px - 24px * 7) / 8)) 0.1rem;
+    grid-template-columns: 0.1rem repeat(8, calc((768px  - 32px - 24px * 8) / 8)) 0.1rem;
   }
 
   .header {
@@ -514,11 +518,11 @@ h1 {
   }
 
   .info > p {
-    max-width: 50ch;
+    max-width: 53.5ch;
   } 
   
   .stars > p {
-    max-width: 80%;
+    max-width: 100%;
   }
 
   .review {
@@ -540,7 +544,7 @@ h1 {
   }
 
   /* Reading section */
-  .grow-together {
+  .read-header {
     max-width: 60%;
   }
 
@@ -566,17 +570,22 @@ h1 {
 
   /* Memberships */
   .memberships {
+    gap: 20px;
     display: grid;
-    row-gap: var(--space-sm);
+    /* grid-template-rows: repeat(2, 350px); */
+    grid-template-columns: repeat(2, 347px);
   }
 
+  .members-heading {
+    grid-column: 2 / -1;
+  }
+  
   .options > * {
     align-items: center;
   }
 
-  .pro {
-    right: 13px;
-    grid-column: 5;
+  .starter {
+    grid-row: 1;
     position: relative;
   }
 
@@ -628,23 +637,25 @@ h1 {
 }
 
 /* Desktop */
-@media(width >= 69em)  {
+@media(width >= 1440px)  {
   .tech-grid {
     column-gap: 30px;
-    grid-template-columns: 105px repeat(12, calc((100% - 70px - 30px * 11) / 12)) 105px;
+    grid-template-columns: 105px repeat(12, calc((100% - 70px - 30px * 12) / 11)) 105px;
   }
 
   .navbar  {
     grid-row: 1;
     grid-column: 2;
   } 
-
+  
   .header {
+    width: 100%;
     min-height: 834px;
   }
 
-  .info > h1 {
-    max-width: 80%;
+
+  .button {
+    padding: 16px 45px;
   }
 
   .picture {
@@ -670,8 +681,8 @@ h1 {
    max-width: 100%;
   }
 
-  .desktop {  
-    left: 83px;
+  .desktop {
+    left: 25px;
     top: 100px;
     grid-row: 1;
     grid-column: 7;
@@ -694,14 +705,14 @@ h1 {
   .read-together {
     margin-top: 100px;
   }
-
+  
   .grow-together {
     align-self: center;
     grid-column: 8 / -1;
   }
 
-  .check-text {
-    width: 100%;
+  .check-text > p {
+    max-width: 30ch;
   }
 
 .read {
@@ -713,18 +724,15 @@ h1 {
 }
 
 .not-average {
-  left: 32px;
   display: block;
-  grid-column: 7;
-  align-self: start;
-  justify-self: start;
+  align-self: center;
   position: relative;
+  grid-column: 7 / -1;
   border-radius: 20px;
 }
 
 .average {
   display: grid;
-  row-gap: 44px;
   grid-column: 2;
   align-self: center;
   grid-template-rows: repeat(2, 133px);
@@ -761,7 +769,7 @@ h1 {
 
 .logos-tech {
   z-index: 1;
-  left: 500px;
+  left: 400px;
   top: 450px;
   position: relative;
 }
@@ -788,6 +796,10 @@ h1 {
   position: relative;
 }
 
+.number-text > p {
+  width: 100%;
+}
+
 .members-heading   {
   left: 36px;
   position: relative;
@@ -797,10 +809,11 @@ h1 {
 
 .memberships {
   display: grid;
+  gap: 20px;
   margin: 0 auto;
   grid-column: 3;
   align-items: center;
-  grid-template-columns: repeat(10, 90px);
+  grid-template-columns: repeat(9, 97px);
 }
 
 .grid {
@@ -808,17 +821,16 @@ h1 {
 }
 
  .pro {
-  left: 6px;
+  left: 73px;
   width: 350px;
   height: 390px;
-  grid-column: 4;
+  grid-column: 3;
   position: relative;
-  /* align-self: end; */
   padding: 40px 24px;
 }
 
  .starter, .enterprise  {
-  width: 258px;
+  width: 286px;
   height: 356px;
 } 
 
@@ -835,10 +847,9 @@ h1 {
 }
 
 .enterprise {
-  left: 13px;
-  grid-column: 8;
+  right: 25px;
+  grid-column: 7;
   position: relative;
-  /* background: linear-gradient(to right, navy, brown); */
 }
 
 .enterprise-button {
@@ -858,7 +869,6 @@ h1 {
 
 .options > h3 {
   font-size: 1.5rem;
-  /* background-color: red; */
 }
 
 /* Five star review */
@@ -884,15 +894,14 @@ h1 {
 body {
   overflow-x: hidden;
 }
+
 .regrid {
-  /* grid-column: 1 / -1; */
   column-gap: 30px;
   grid-template-columns: 0.25rem repeat(12, calc((100% - 70px - 30px * 11) / 12)) 0.25rem;
 }
 
 .contents {
   display: grid;
-  /* grid-column: 1 / -1; */
   grid-template-columns: repeat(10, 144px);
 }
 
