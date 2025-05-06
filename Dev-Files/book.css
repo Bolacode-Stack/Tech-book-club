@@ -272,17 +272,6 @@ h1 {
   background-position: center center / cover;
 }
 
-.glow {
-  top: 70px;
-  left: 240px;
-  width: 10px;
-  height: 10px;
-  position: relative;
-  border-radius: 50px;
-  /* background-color: aquamarine; */
-  /* box-shadow: 0 0 150px 80px aqua; */
-}
-
 .pattern {
   position: absolute;
 }
@@ -295,6 +284,10 @@ h1 {
 
 .step-container {
   margin-top: 30px;
+}
+
+.arrows {
+  display: none;
 }
 
 .number-text {
@@ -323,10 +316,6 @@ h1 {
   border: 2.5px solid var(--neutral-900);
 }
 
-.arrows {
-  display: none;
-}
-
 /* Memberships */
 .members-heading {
   grid-column: 2; 
@@ -346,10 +335,6 @@ h1 {
   border-radius: 8px;
   padding: var(--space-sm);
   border: 1px solid var(--neutral-200);
-}
-
-.pro {
-  background: linear-gradient(to right, var(--neutral-100, var(--light-blue)));
 }
 
 .options > h3 {
@@ -463,6 +448,7 @@ h1 {
 
 .footer-button {
   margin: 0 auto;
+  cursor: pointer;
   color: var(--neutral-0);
   border: 2px solid #fff;
   background-color: var(--neutral-900);
