@@ -14,6 +14,8 @@
 ## My Process
 I carefully went through the design and after that, i created some custom properties for the colors, fonts etc and started building the project.
 
+- Opinion: I am really proud of this project. It makes me happy
+
 ## Built with
 It was built with HTML & CSS, i didn't use SASS or any CSS Frameworks
 
