@@ -231,7 +231,7 @@ p {
   margin-block-start: var(--font-md);
 }
 
-/* Book club */
+/* Book Club */
 .book-club {
   min-height: 682.5px;
 }
@@ -317,7 +317,7 @@ p {
   padding-block-start: calc(var(--font-md) - 0.25em);
 }
 
-/* First option */
+/* options */
 .options {
   grid-column: 1;
   padding: var(--space-sm);
@@ -658,9 +658,6 @@ p {
   .developers {
     align-items: start;
     justify-content: start;
-  }
-
-  .stars {
   }
 
   .stars > p {
