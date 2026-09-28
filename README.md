@@ -9,11 +9,7 @@
 - [What's Next](#WhatsNext)
 
 ### `Screenshot`
-<<<<<<< HEAD
-![](./Screenshots/Desktop-Hero(2).png)
-=======
 ![](./Screenshots%20📷/)
->>>>>>> aed15c4819d1f7a958fe105c2b310aec2f136b44
 
 ## `My Process`
 I carefully went through the design and after that, i created some custom properties for the colors, fonts etc and started building the project.
