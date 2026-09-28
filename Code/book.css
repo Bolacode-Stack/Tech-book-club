@@ -1,4 +1,4 @@
-/*  Colour variables */
+/*  Colours */
 :root {
   --neutral-0: #ffffff;
   --light-blue: #9cc9da;
@@ -13,7 +13,7 @@
   --gradient: linear-gradient(90deg, #ffe2d1 0%, #fff5ef 100%);
 }
 
-/* Spacing custom props / Font */
+/* Font / Spacing */
 :root {
   --font-md: 34px;
   --space-lg: 120px;
