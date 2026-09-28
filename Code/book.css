@@ -86,7 +86,7 @@ p {
 .header {
   min-height: 1100px;
   background: var(--light-salmon-50);
-  background-image: url(/src/assets/pattern-light-bg.svg);
+  background-image: url(/assets/pattern-light-bg.svg);
 }
 
 .info {
@@ -221,7 +221,7 @@ p {
   width: 100%;
   background-repeat: no-repeat;
   background-position: center center / cover;
-  background-image: url(/src/assets/pattern-circle.png);
+  background-image: url(/assets/pattern-circle.png);
 }
 
 .not-average {
@@ -237,7 +237,7 @@ p {
   margin-top: var(--space-md);
   background: var(--neutral-100);
   padding-bottom: var(--space-md);
-  background-image: url(/src/assets/pattern-light-bg.svg);
+  background-image: url(/assets/pattern-light-bg.svg);
 }
 
 .tech-reading {
@@ -414,7 +414,7 @@ p {
   color: var(--neutral-0);
   border-radius: 20px 20px 0 0;
   background-color: var(--neutral-900);
-  background-image: url(Images/pattern-dark-bg.svg);
+  background-image: url(/assets/pattern-dark-bg.svg);
 }
 
 .contents > h1 {
@@ -507,10 +507,6 @@ p {
 
   .review {
     font-size: 1.125rem;
-  }
-
-  .tablet-image {
-    /* border-radius: 50px; */
   }
 
   .tablet {
