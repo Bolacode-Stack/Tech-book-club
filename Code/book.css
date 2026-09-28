@@ -237,7 +237,7 @@ p {
   margin-top: var(--space-md);
   background: var(--neutral-100);
   padding-bottom: var(--space-md);  
-   background-image: url(/assets/pattern-glow.svg), url(/assets/pattern-light-bg.svg);    
+   background-image: url(/assets/pattern-glow.svg);    
 }
 
 .tech-reading {

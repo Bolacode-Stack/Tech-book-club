@@ -23,7 +23,7 @@ The layout of the entire page was a bit challenging (It's basically different fo
 ![](./Screenshots/Tech-reading-desktop.png)
 
 ## Development issues
- The images on the page are not scaling properly, they remain at the a `fixed width` when i try to adapt the project to different screen sizes which is annoying... 
+ The images on the page are not scaling properly, they remain at a `fixed width` when i try to adapt the project to different screen sizes which is annoying... 
 
  ![](./Screenshots/Images-not-scaling.png)
 
