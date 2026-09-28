@@ -9,7 +9,7 @@
 - [What's Next](#WhatsNext)
 
 ### `Screenshot`
-![](./Screenshots%20📷/)
+![](./Screenshots/Desktop-Full.png)
 
 ## `My Process`
 I carefully went through the design and after that, i created some custom properties for the colors, fonts etc and started building the project.
