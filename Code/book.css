@@ -236,8 +236,8 @@ p {
   padding-inline: 1rem;
   margin-top: var(--space-md);
   background: var(--neutral-100);
-  padding-bottom: var(--space-md);
-  background-image: url(/assets/pattern-light-bg.svg);
+  padding-bottom: var(--space-md);  
+   background-image: url(/assets/pattern-glow.svg), url(/assets/pattern-light-bg.svg);    
 }
 
 .tech-reading {
@@ -620,7 +620,7 @@ p {
 }
 
 /* Desktop */
-@media (width >= 1200px) {
+@media (width >= 1100px) {
   .tech-grid {
     column-gap: 30px;
     grid-template-columns: 105px repeat(
@@ -756,7 +756,7 @@ p {
 
   .tech-logos {
     z-index: 1;
-    left: 400px;
+    left: 420px;
     top: 450px;
     position: relative;
   }
@@ -833,6 +833,7 @@ p {
   }
 
   .starter-button {
+    width: 84%;
     padding: 15px 43px;
   }
 
@@ -844,7 +845,7 @@ p {
 
   .enterprise-button {
     display: flex;
-    width: fit-content;
+    width: 84%;
     padding: 15px 55px;
     letter-spacing: -1px;
   }
